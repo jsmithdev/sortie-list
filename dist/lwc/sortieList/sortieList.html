@@ -1,0 +1,21 @@
+<template>
+    <ul class="container">
+        <template for:each={currentList} for:item="option">
+
+            <li
+                key={option}
+                class="listItem"
+                draggable="true" 
+                ondrop={handleDrop}
+                ondragend={handleDragEnd}
+                ondragstart={handleDragStart}
+                ondragenter={handleDragEnter}
+                ondragover={handleDragOver}
+                ondragleave={handleDragLeave}
+                onclick={preventDefault}>
+                {option}
+            </li>
+
+        </template>
+    </ul>
+</template>
