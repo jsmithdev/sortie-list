@@ -2,12 +2,11 @@
 
 ## LWC to sort a list by drag and drop
 
-This is really made to be "consumed" by a larger / parent component
+### Consuming
 
-- Consumers can use ```list``` to set array of Strings
-- Consumers can use ```onchange``` to listen for changes
+- Use `list` attribute to set array of Strings
+- Use `onchange` attribute to listen for changes
 
-Consumer HTML
 ```html
 <c-sortie-list
     list={array}
@@ -15,7 +14,8 @@ Consumer HTML
 ></c-sortie-list>
 ```
 
-Consumer JS
+Example of what above could look like to set Array and get sorted Array back 
+
 ```js
 import { LightningElement } from 'lwc';
 
@@ -25,7 +25,7 @@ export default class Demo extends LightningElement {
 
     handleChange(event){
 
-        event.detail // Consumer has array in new order set by user
+        event.detail // is Array of given list in new order set by user
     }
 }
 ```
