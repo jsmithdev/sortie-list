@@ -2,9 +2,15 @@ import { LightningElement, api, track } from 'lwc';
 
 export default class SortieList extends LightningElement {
 
-    @api list
+    @api list = []
+    @api color = 'black'
+    @api backgroundColor = 'white'
 
     @track currentList
+
+    get itemStyle(){
+        return `background-color: ${this.backgroundColor}; color: ${this.color};`
+    }
 
     connectedCallback(){
         
